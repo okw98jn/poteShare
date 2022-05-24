@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PoteShare</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<head>
+  <title>PoteShare</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header_left_nav">
+      <%= link_to image_tag("logo.png"), "/" %>
+    </div>
+    <div class="header_right_nav">
+      <div class="nav_item">
+        <%= link_to("ログイン", "/users/sign_in", {class: "btn sign_in"}) %>
+        <%= link_to("新規登録", "/users/sign_up", {class: "btn sign_up"}) %>
+      </div>
+    </div>
+  </div>
+
+  <%= yield %>
+  <div class="footer">
+    <p>© 2020 POTEPAN.INC.</p>
+  </div>
+</body>
+
 </html>
