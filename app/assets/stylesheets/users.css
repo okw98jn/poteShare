@@ -1,0 +1,58 @@
+/* 新規登録・ログインページ */
+.container{
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgb(21 27 38 / 15%) 0px 1px 3px 0px;
+}
+.container p{
+    color: #333;
+    margin-bottom: 20px;
+}
+.sign_in_container{
+    margin-top: 70px;
+}
+
+.form{
+    width: 360px;
+    margin: 0 auto;
+}
+.form_item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.form_notes{
+    color:#EE5454;
+    margin-right: 10px;
+}
+.form_input{
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 8px 8px;
+    border: solid 1px#dcdcdc;
+}
+.form_btn{
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #4A90E2;
+    border: none;
+    cursor: pointer;
+}
+.form_btn:hover{
+    opacity: 0.9;
+}
+.login_link{
+    color: #4A90E2;
+}
+/* 新規登録・ログインページ */
