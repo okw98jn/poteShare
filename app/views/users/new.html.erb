@@ -1,0 +1,24 @@
+<div class = "container">
+    <p>新しいアカウントを作成</p>
+
+    <%= form_with model: @user , local: true, class: "form" do |f| %>
+    <div class = "form_item">
+        <div class = "form_notes" >※必須</div>
+        <%= f.text_field :name ,placeholder:"ユーザー名",class:"form_input"%>
+    </div>
+    <div class = "form_item">
+        <div class = "form_notes" >※必須</div>
+        <%= f.text_field :email,placeholder:"メールアドレス",class:"form_input",type:"email" %>
+    </div>
+    <div class = "form_item">
+        <div class = "form_notes" >※必須</div>
+        <%= f.password_field :password,placeholder:"パスワード(6文字以上)",class:"form_input" %>
+    </div>
+    <div class = "form_item">
+        <div class = "form_notes" >※必須</div>
+        <%= f.password_field :password_confirmation,placeholder:"パスワード確認",class:"form_input" %>
+    </div>
+    <%= f.submit "新しいアカウントを作成" ,class:"form_btn" %>
+    <%= link_to("すでにアカウントをお持ちの方はログイン","/users/sign_in",class:"login_link")%>
+    <% end %>
+</div>
