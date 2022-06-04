@@ -1,0 +1,13 @@
+ja:
+  time:
+    formats:
+      default: "%Y年%m月%d日 %H時%M分"
+
+  activerecord:
+    attributes:
+      user:
+    #カラム名：表示させたい日本語
+        name: 名前
+        password: パスワード
+        email: メールアドレス
+        password_confirmation: "確認用パスワード"
