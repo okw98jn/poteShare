@@ -1,0 +1,5 @@
+<% if @current_user.image_name? %>
+<div class="current_user_image"><%= image_tag @current_user.image_name.url %></div>
+<% else %>
+<div class="current_user_image"><%= image_tag "noimage.jpg" %></div>
+<% end %>
