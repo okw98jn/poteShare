@@ -1,0 +1,23 @@
+<div class="user_container">
+    <div class="row">
+        <%= render "shared/user_nav", obj: @current_user %>
+        <div class="user_view">
+            <div class="user_view_box">
+                <div class="update_content row">
+                    <h2>アカウント</h2>
+                </div>
+                <div class="update_content row">
+                    <label class="user_label" for="email">メールアドレス</label>
+                    <div><%= @current_user.email %></div>
+                </div>
+                <div class="update_content row">
+                    <label class="user_label" for="password">パスワード</label>
+                    <div class="user_info">*********</div>
+                </div>
+                <div class="update_content row">
+                    <%= link_to("編集", "/users/edit", {class: "btn edit"}) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

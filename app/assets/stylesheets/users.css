@@ -25,16 +25,22 @@
     align-items: center;
     margin-bottom: 10px;
 }
-.form_notes{
-    color:#EE5454;
-    margin-right: 10px;
-}
+
 .form_input{
     font-size: 16px;
     width: 300px;
     border-radius: 5px;
     padding: 8px 8px;
     border: solid 1px#dcdcdc;
+}
+.required_signup::before{
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px;
 }
 .form_btn{
     color: #fff;
@@ -48,11 +54,162 @@
     background-color: #4A90E2;
     border: none;
     cursor: pointer;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
 }
 .form_btn:hover{
-    opacity: 0.9;
+    opacity: 0.8;
 }
 .login_link{
     color: #4A90E2;
 }
 /* 新規登録・ログインページ */
+
+
+/* プロフィール・アカウント画面 */
+.user_container{
+    height: 100vh;
+    width: 100%;
+    background-color: #F6F8F9;
+}
+.row{
+    display: flex;
+}
+.user_nav{
+    padding: 30px 15px;
+    width: 19%;
+    height: 100vh;
+    border-right: solid 2px #E2E2E2;
+    background-color: #fff;
+}
+.user_nav ul{
+    padding-left: 25px;
+}
+.user_nav li{
+    font-size: 18px;
+    padding: 10px;
+    line-height: 18px;
+}
+
+.user_nav a:hover{
+    color: #4A90E2;
+    opacity: 0.8;
+}
+.user_view{
+    padding: 0 10px;
+    width: 100%;
+}
+.user_view_box{
+    max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px auto;
+}
+.update_content{
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+.update_content h2{
+    font-weight:normal;
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+.user_label{
+    font-weight: bold;
+    margin-bottom: 8px;
+    width: 25%;
+}
+.required::after{
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+.user_info{
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.icon_box{
+    text-align: center;
+}
+.update_form{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0.375rem 0.75rem;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+.image_file{
+    font-size: 16px;
+}
+.mb_1{
+    margin-bottom: 1.5rem;
+}
+
+/* プロフィール・アカウント画面 */
+
+
+/* アカウント編集画面 */
+.edit_container{
+    padding-top: 36px;
+    font-size: 16px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.edit_frame{
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 0px auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgb(21 27 38 / 15%) 0px 1px 3px 0px;
+}
+.edit_inner{
+    width: 360px;
+    margin: 0px auto;
+}
+.edit_title{
+    margin-bottom: 1rem;
+}
+.form_group{
+    margin-bottom: 1rem;
+}
+.edit_btn{
+    margin: 5px 0;
+}
+.back_btn{
+    color:#4A90E2;
+    background-color:#fff;
+    border: 1px solid #6c757d;
+}
+.back_btn:hover{
+    background-color: #495057;
+}
+
+
+
+/* アカウント編集画面 */
+
+
