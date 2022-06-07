@@ -10,4 +10,5 @@ ja:
         name: 名前
         password: パスワード
         email: メールアドレス
-        password_confirmation: "確認用パスワード"
+        password_confirmation: "パスワード（確認用）"
+        introduction: "自己紹介"
