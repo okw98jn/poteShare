@@ -6,9 +6,14 @@ ja:
   activerecord:
     attributes:
       user:
-    #カラム名：表示させたい日本語
         name: 名前
         password: パスワード
         email: メールアドレス
-        password_confirmation: "パスワード（確認用）"
-        introduction: "自己紹介"
+        password_confirmation: パスワード（確認用）
+        introduction: 自己紹介
+      room:
+        name: 名前
+        address: 住所
+        price: 料金
+        room_image: ルーム画像
+        introduction: 自己紹介
