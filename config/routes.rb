@@ -2,6 +2,8 @@
 #
 
 Rails.application.routes.draw do
+  get 'keyword_search', to: 'rooms#keyword_search'
+  get 'search', to: 'rooms#search'
   get '/', to: 'home#top'
 
   get 'users/sign_in', to: 'users#sign_in'
@@ -12,4 +14,5 @@ Rails.application.routes.draw do
   post 'login', to: 'users#login'
   get 'logout', to: 'users#logout'
   resources :users
+  resources :rooms
 end
