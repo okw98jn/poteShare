@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :not_login, { only: [:new, :create, :index] }
 
   def new
     @room = Room.new
@@ -30,11 +31,9 @@ class RoomsController < ApplicationController
     @search_rooms = Room.keyword_search(params[:keyword])
   end
 
-
   private
 
   def room_params
     params.require(:room).permit(:name, :address, :introduction, :price, :room_image).merge(user_id: @current_user.id)
   end
-
 end
