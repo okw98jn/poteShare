@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :forbid_login_user, { only: [:new, :create, :sign_in, :login] }
+  before_action :not_login, { only: [:profile, :account, :edit, :update, :logout] }
 
   def new
     @user = User.new

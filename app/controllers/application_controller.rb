@@ -14,4 +14,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # ログインしていない状態の制限
+  def not_login
+    if @current_user == nil
+      flash[:alert] = 'ログインまたは新規登録が必要です'
+      redirect_to('/users/sign_in')
+    end
+  end
 end
