@@ -1,17 +1,29 @@
 <div class="edit_container">
     <div class="edit_frame">
         <h2 class="edit_title">アカウント編集</h2>
+        <% if @error_message %>
+        <span class="error_message">
+            <%= @error_message %>
+        </span>
+        <% end %>
         <div class="edit_inner">
-            <%= form_with  local: true do |f| %>
+            <%= form_with url: password_update_path, method: :post,  local: true do |f| %>
+            <div class="form_group">
+                <%= f.label :email ,"メールアドレス"%>
+                <%= f.text_field :email,class:"update_form",value: @email%>
+            </div>
+            <div class="form_group">
+                <%= f.label :now_password ,"現在のパスワード"%>
+                <%= f.password_field :now_password,class:"update_form",value: @now_password%>
+            </div>
             <div class="form_group">
                 <%= f.label :password ,"変更後パスワード（変更する場合のみ入力）"%>
-                <%= f.password_field :password,class:"update_form"%>
+                <%= f.password_field :password,class:"update_form",placeholder:"パスワード(6文字以上)",minlength:'6', required: true%>
             </div>
             <div class="form_group">
                 <%= f.label :password_confirmation ,"パスワード確認用（変更する場合のみ入力）"%>
-                <%= f.password_field :password_confirmation,class:"update_form"%>
+                <%= f.password_field :password_confirmation,class:"update_form",placeholder:"パスワード確認",minlength:'6', required: true%>
             </div>
-
             <div class="form_group">
                 <%= f.submit "更新" ,class:"form_btn edit_btn" %>
                 <%= link_to("戻る","/users/account",class:"form_btn back_btn")%>

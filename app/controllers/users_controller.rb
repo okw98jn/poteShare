@@ -52,6 +52,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def password_update
+    @email = params[:email]
+    @now_password = params[:now_password]
+
+    if @email == @current_user.email && @current_user.authenticate(params[:now_password])
+      password_change
+    else
+      @error_message = 'メールアドレスまたは現在のパスワードが間違っています'
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
   def logout
     session[:user_id] = nil
@@ -64,4 +75,19 @@ private
 
 def user_params
   params.require(:user).permit(:name, :email, :password, :password_confirmation, :image_name, :introduction)
+end
+
+def password_change
+  @new_password = params[:password]
+  @new_password_confirmation = params[:password_confirmation]
+
+  if @new_password == @new_password_confirmation
+    @current_user.password = @new_password
+    @current_user.save
+    flash[:notice] = 'パスワードを変更しました'
+    redirect_to('/users/account')
+  else
+    @error_message = '変更後のパスワードを正しく入力して下さい'
+    render :edit, status: :unprocessable_entity
+  end
 end
