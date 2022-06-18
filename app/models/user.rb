@@ -15,6 +15,7 @@ class User < ApplicationRecord
 has_secure_password
 mount_uploader :image_name, ImageNameUploader
 has_many :rooms
+has_many :reservations
 
 validates :name, presence: true
 validates :email, presence: true, uniqueness: { case_sensitive: false }
