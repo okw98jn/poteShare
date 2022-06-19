@@ -4,8 +4,9 @@
 #
 #  id         :bigint           not null, primary key
 #  end_date   :datetime         not null
-#  number     :integer          not null
+#  number     :integer
 #  start_date :datetime         not null
+#  sum_price  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  room_id    :bigint           not null

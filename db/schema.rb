@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_18_120029) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_19_145048) do
   create_table "reservations", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "room_id", null: false
     t.datetime "start_date", null: false
     t.datetime "end_date", null: false
-    t.integer "number", null: false
+    t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sum_price"
     t.index ["room_id"], name: "index_reservations_on_room_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
