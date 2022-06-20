@@ -44,6 +44,17 @@ h4{
     font-weight: 500;
     line-height: 1.2;
 }
+h5{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h6{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
 input,textarea{
     transition:.2s ease-in-out,box-shadow .3s ease-in-out;
 }
@@ -96,6 +107,11 @@ textarea:focus{
 .edit{
     background-color: #4A90E2;
     padding: 8px 55px;
+}
+.back{
+    background-color: #6C757D;
+    padding: 8px 55px;
+    text-align: center;
 }
 /* ボタン */
 
