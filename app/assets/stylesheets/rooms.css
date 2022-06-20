@@ -191,3 +191,64 @@
     letter-spacing: 1px;
 }
 /* 検索結果ページ */
+
+
+/* 予約確認ページ */
+.confirmation_container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px 0;
+}
+.reservations_new {
+    width: 550px;
+    padding: 20px;
+    border: 1px solid #eaedef;
+    margin: 0 auto;
+}
+.confirmation_content{
+    border-bottom: 1px solid #eaedef;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.reservations_new_select{
+    padding: 15px 0;
+}
+.reservations_new_select p{
+    font-size: 13px;
+}
+.readonly{
+    background-color: #e9ecef !important;
+}
+/* 予約確認ページ */
+
+
+/* 予約詳細ページ */
+.reservation_container{
+    background-color: #F6F8F9;
+    border-left: 2px solid #e2e2e2;
+    padding: 15px;
+    margin-top: 30px;
+}
+.reservation_view_box{
+    max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px auto;
+}
+.reservation_content{
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+    display: flex;
+}
+.left_content{
+    width: 30%;
+    font-weight: bold;
+
+}
+.right_content{
+    text-align: left;
+}
+/* 予約詳細ページ */
