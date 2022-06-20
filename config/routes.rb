@@ -2,6 +2,7 @@
 #
 
 Rails.application.routes.draw do
+
   get '/', to: 'home#top'
 
   get 'users/sign_in', to: 'users#sign_in'
@@ -17,5 +18,9 @@ Rails.application.routes.draw do
   get 'keyword_search', to: 'rooms#keyword_search'
   get 'search', to: 'rooms#search'
   resources :rooms
+
+  get 'reservation/confirmation', to: 'reservations#confirmation'
+  resources :reservations
+
 
 end
