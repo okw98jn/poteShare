@@ -1,3 +1,10 @@
+<% if flash[:error] %>
+<ul class="errors">
+    <% flash[:error].each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+</ul>
+<% end %>
 <div class="room_show">
     <div class="row">
         <div class="flex">
@@ -26,7 +33,7 @@
                 <%= f.label :end_date ,"終了日",class:'room_show_label' %>
                 <%= f.date_field :end_date,class:"update_form mb_1"%>
                 <%= f.label :number ,"人数",class:'room_show_label' %>
-                <%= f.number_field :number,class:"update_form mb_1"%>
+                <%= f.number_field :number,class:"update_form mb_1",min:1%>
                 <%= f.submit "予約する",class:'form_btn edit mt_zero' %>
                 <%end%>
             </div>

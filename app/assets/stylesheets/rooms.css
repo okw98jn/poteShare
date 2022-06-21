@@ -220,6 +220,16 @@
 .readonly{
     background-color: #e9ecef !important;
 }
+.errors{
+    padding:5px 0 ;
+    margin: 0 auto;
+    background-color: rgb(242, 105, 0);
+}
+.errors li{
+    text-align: center;
+    color:white;
+    font-size: 12px;
+}
 /* 予約確認ページ */
 
 

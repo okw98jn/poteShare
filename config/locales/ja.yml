@@ -17,3 +17,7 @@ ja:
         price: 料金
         room_image: ルーム画像
         introduction: 自己紹介
+      reservation:
+        start_date: 開始日
+        end_date: 終了日
+        number: 人数
