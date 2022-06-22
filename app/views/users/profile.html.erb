@@ -1,0 +1,40 @@
+<div class="user_container">
+    <div class="row">
+        <%= render "shared/user_nav", obj: @current_user %>
+        <div class="user_view">
+            <div class="user_view_box">
+                <div class="update_content row">
+                    <h2>プロフィール</h2>
+                </div>
+                <div class="update_content ">
+                    <div class="icon_box">
+                        <%= render "shared/user_image", obj: @current_user %>
+                    </div>
+                    <div class="error_message">
+                        <% if @current_user.errors.include?(:name) %>
+                        <span class="error_message"><%= @current_user.errors.full_messages_for(:name).first %></span>
+                        <% end %>
+                    </div>
+                </div>
+                <%= form_with model: @current_user , local: true do |f| %>
+                <div class="update_content row">
+                    <%= f.label :image_name ,"アイコン画像",class:'user_label' %>
+                    <%= f.file_field :image_name,class:'image_file mb_1' %>
+                </div>
+                <div class="update_content row">
+                    <%= f.label :name ,"名前",class:'user_label required' %>
+                    <%= f.text_field :name, placeholder:"名前を入力" ,class:"update_form mb_1",value:@current_user.name%>
+                </div>
+
+                <div class="update_content row">
+                    <%= f.label :introduction ,"自己紹介",class:'user_label'%>
+                    <%= f.text_area :introduction ,placeholder:"自己紹介を入力",class:"update_form mb_1",rows:5%>
+                </div>
+                <div class="update_content row">
+                    <%= f.submit "更新する",class:'btn edit' %>
+                </div>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+    <p>新しいアカウントを作成</p>
+
+    <%= form_with model: @user , local: true, class: "form" do |f| %>
+    <div class="form_item">
+        <label class="required_signup"></label>
+        <%= f.text_field :name ,placeholder:"ユーザー名",class:"form_input"%>
+    </div>
+    <% if @user.errors.include?(:name) %>
+    <span class="error_message"><%= @user.errors.full_messages_for(:name).first %></span>
+    <% end %>
+    <div class="form_item">
+        <label class="required_signup"></label>
+        <%= f.text_field :email,placeholder:"メールアドレス",class:"form_input",type:"email" %>
+    </div>
+    <% if @user.errors.include?(:email) %>
+    <span class="error_message"><%= @user.errors.full_messages_for(:email).first %></span>
+    <% end %>
+    <div class="form_item">
+        <label class="required_signup"></label>
+        <%= f.password_field :password,placeholder:"パスワード(6文字以上)",class:"form_input" %>
+    </div>
+    <% if @user.errors.include?(:password) %>
+    <span class="error_message"><%= @user.errors.full_messages_for(:password).first %></span>
+    <% end %>
+    <div class="form_item">
+        <label class="required_signup"></label>
+        <%= f.password_field :password_confirmation,placeholder:"パスワード確認",class:"form_input" %>
+    </div>
+    <% if @user.errors.include?(:password_confirmation) %>
+    <span class="error_message"><%= @user.errors.full_messages_for(:password_confirmation).first %></span>
+    <% end %>
+    <%= f.submit "新しいアカウントを作成" ,class:"form_btn" %>
+    <%= link_to("すでにアカウントをお持ちの方はログイン","/users/sign_in",class:"login_link")%>
+    <% end %>
+</div>

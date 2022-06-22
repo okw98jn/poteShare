@@ -1,0 +1,41 @@
+<div class="user_container mb">
+    <div class="row">
+        <%= render "shared/room_nav" %>
+        <div class="user_view">
+            <div class="user_view_box">
+                <div class="update_content ">
+                    <h2>ルーム情報登録</h2>
+                    <%= render "shared/error", obj: @room %>
+                </div>
+
+
+                <%= form_with model: @room , local: true do |f| %>
+                <div class="update_content row">
+                    <%= f.label :name ,"ルーム名",class:'user_label required' %>
+                    <%= f.text_field :name, placeholder:"ルーム名を入力" ,class:"update_form mb_1"%>
+                </div>
+                <div class="update_content row">
+                    <%= f.label :introduction ,"ルーム紹介",class:'user_label required'%>
+                    <%= f.text_area :introduction ,placeholder:"ルーム説明を入力",class:"update_form mb_1",rows:5%>
+                </div>
+                <div class="update_content row">
+                    <%= f.label :price ,"料金",class:'user_label required' %>
+                    <%= f.number_field :price, placeholder:"1日あたりの料金を入力" ,class:"update_form mb_1"%>
+                </div>
+                <div class="update_content row">
+                    <%= f.label :address ,"住所",class:'user_label required' %>
+                    <%= f.text_field :address, placeholder:"住所を入力" ,class:"update_form mb_1"%>
+                </div>
+                <div class="update_content row">
+                    <%= f.label :room_image ,"ルーム画像",class:'user_label required' %>
+                    <%= f.file_field :room_image,class:'image_file mb_1' %>
+                </div>
+
+                <div class="update_content row">
+                    <%= f.submit "登録",class:'btn edit' %>
+                </div>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</div>

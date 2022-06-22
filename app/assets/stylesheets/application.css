@@ -13,3 +13,232 @@
  *= require_tree .
  *= require_self
  */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 180px;
+    color: #333;
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+li{
+    list-style: none;
+}
+h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h4{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h5{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h6{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+input,textarea{
+    transition:.2s ease-in-out,box-shadow .3s ease-in-out;
+}
+input:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+textarea:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+.field_with_errors {
+    display: contents;
+}
+.hide{
+    display: none !important;
+}
+
+
+/* ボタン */
+.btn{
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    border: none;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.sign_in{
+    background-color: #4A90E2;
+}
+.sign_up{
+    background-color: #6C757D;
+    margin-left: 15px;
+}
+.edit{
+    background-color: #4A90E2;
+    padding: 8px 55px;
+}
+.back{
+    background-color: #6C757D;
+    padding: 8px 55px;
+    text-align: center;
+}
+/* ボタン */
+
+
+/* header */
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    padding: 4px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_left_nav{
+    display: flex;
+    align-items: center;
+}
+.search_box{
+    position: relative;
+    margin-right: 5px;
+}
+.header_search{
+    width: 180px;
+    display: inline-block;
+    position: relative;
+    border-radius: 2px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 30px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+}
+.header i{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 18px;
+}
+
+.current_user_name{
+    color: #fff;
+    margin-right: 20px;
+}
+.current_user_image img{
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.nav_item{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.header_nav_menu{
+    background-color: #fff;
+    border: 3px solid #F6F8F9;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 15px;
+    z-index: 1000;
+    display: none;
+}
+.header_nav_menu_on_off{
+    display: block;
+}
+.header_nav_menu li{
+    line-height: 30px;
+    font-size: 16px;
+    padding: 3px 5px;
+}
+.header_nav_menu a:hover{
+    color: #4A90E2;
+    opacity: 0.8;
+}
+/* header */
+
+
+/* footer */
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    margin-top: 64px;
+    padding-top: 90px;
+    background-color: #111;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+.footer p{
+    font-size: 12px;
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+/* footer */
+
+
+/* フラッシュメッセージ */
+.notice{
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    background-color:palegreen;
+    opacity: 0.7;
+    text-align: center;
+}
+.alert{
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    background-color:indianred;
+    opacity: 0.7;
+    text-align: center;
+}
+/* フラッシュメッセージ */
+
+
+/* エラーメッセージ */
+.error_message{
+    display: inline-block;
+    margin-bottom: 10px;
+    color:lightcoral;
+}
+/* エラーメッセージ */

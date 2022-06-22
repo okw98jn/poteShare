@@ -1,0 +1,31 @@
+<div class="confirmation_container">
+    <div class="reservations_new">
+        <h4 class="confirmation_content">予約内容確認</h4>
+        <h5 class="price_icon"><%= "#{@room.price} / 日" %></h5>
+        <div class="reservations_new_select">
+            <%= form_with url:reservations_path , method: :post, local: true do |f| %>
+                <%= f.hidden_field :user_id,value: @current_user.id %>
+                <%= f.hidden_field :room_id,value: @room.id %>
+                <%= f.hidden_field :start_date,value: @reservation.start_date %>
+                <%= f.hidden_field :end_date,value: @reservation.end_date %>
+                <%= f.hidden_field :number,value: @reservation.number %>
+
+                <%= f.label :start_date ,"開始日",class:'room_show_label' %>
+                <%= f.text_field :start_date,class:"update_form readonly mb_1",value: @reservation.start_date.strftime("%Y年%m月%d日"),disabled:true %>
+
+                <%= f.label :end_date ,"終了日",class:'room_show_label' %>
+                <%= f.text_field :end_date,class:"update_form readonly mb_1",value: @reservation.end_date.strftime("%Y年%m月%d日"),disabled:true %>
+
+                <h6 class="confirmation_content"><%= "使用日数 : #{@day} 日" %></h6>
+                <h6 class="confirmation_content"><%= "人数 : #{@reservation.number} 人" %></h6>
+
+                <%= f.label :sum_price ,"合計金額",class:'room_show_label'%>
+                <%= f.number_field :sum_price,class:"update_form readonly mb_1",value: @sum_price%>
+                
+                <p class="confirmation_content ">上記内容でよろしければ「予約を確定」を押してください</p>
+                <%= f.submit "予約する",class:'form_btn edit mt_zero' %>
+                <%= link_to('戻る',"/rooms/#{@room.id}",class:'form_btn back mt_zero') %>
+            <%end%>
+        </div>
+    </div>
+</div>
